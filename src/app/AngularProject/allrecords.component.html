@@ -1,0 +1,68 @@
+<div class="container">
+  <form [formGroup]="AL">
+    <div class="row">
+      <div class="col-md-7"></div>
+      <div class="col-md-5">
+        <div class="form-group">
+          <input type="number" class="form-control" placeholder="Serach by Id" formControlName="Id">
+          <button type="submit" class="btn btn-info" (click)="GetById()">Search</button>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>FirmName</th>
+                <th>OwnerName</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Pincode</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of InfoById">
+                <td>{{i.Id}}</td>
+                <td>{{i.FirmName}}</td>
+                <td>{{i.OwnerName}}</td>
+                <td>{{i.Contact}}</td>
+                <td>{{i.Email}}</td>
+                <td>{{i.Pincode}}</td>
+                <td>{{i.Address}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <h1 style="text-align: center;"><b><u>All Records</u></b></h1>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>FirmName</th>
+            <th>OwnerName</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Pincode</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of AllInfo">
+            <td>{{s.Id}}</td>
+            <td>{{s.FirmName}}</td>
+            <td>{{s.OwnerName}}</td>
+            <td>{{s.Contact}}</td>
+            <td>{{s.Email}}</td>
+            <td>{{s.Pincode}}</td>
+            <td>{{s.Address}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" class="btn btn-info" (click)="GetAllInfo()">Get All Sign-Up Records</button>
+    </div>
+    <div class="col-md-3"></div>
+  </form>
+</div>

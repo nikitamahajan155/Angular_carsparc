@@ -1,0 +1,56 @@
+
+<body>  
+<div class="container">
+    {{SC.value|json}}
+    {{SCSignup|json}}
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form [formGroup]="SC" novalidate>
+                    <div class="card">
+                <h1 style="text-align: center;"><b>Sign-Up</b></h1>
+                <h5 style="text-align: center; margin-bottom: 25px;" ><b>(Service Center)</b></h5>
+                <div class="input_field">
+                <div class="form-group">
+                    <input type="text" placeholder="Firm Name" class="form-control" formControlName="FirmName">
+                    <div class="validation" *ngIf="SC.get('FirmName').hasError('required') && SC.get('FirmName').touched"></div> 
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Owner Name" class="form-control" formControlName="OwnerName"> 
+                    <div class= "validation" *ngIf="SC.get('OwnerName').hasError('required') && SC.get('OwnerName').touched"></div> 
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Contact" class="form-control" formControlName="Contact">
+                    <div class= "validation" *ngIf="SC.get('Contact').hasError('required') && SC.get('Contact').touched"></div> 
+                </div>
+                <div class="form-group">
+                    <input type="Email" placeholder="Email" class="form-control" formControlName="Email" >
+                    <div class= "validation" *ngIf="SC.get('Email').hasError('required') && SC.get('Email').touched"></div> 
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control" formControlName="Password">
+                    <div class= "validation" *ngIf="SC.get('Password').hasError('required') && SC.get('Password').touched"></div> 
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Confirm Password" class="form-control" formControlName="ConfirmPassword">
+                    <div class= "validation" *ngIf="SC.get('ConfirmPassword').hasError('required') && SC.get('ConfirmPassword').touched"></div> 
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Pincode" class="form-control" formControlName="Pincode">                </div>
+                <div class="form-group">
+                   <textarea rows="4" cols="50" class="form-control"  placeholder="Address" formControlName="Address"></textarea>
+                   <div class= "validation" *ngIf="SC.get('Address').hasError('required') && SC.get('Address').touched"></div> 
+                </div>
+                <div class="form-group"> 
+                        <button type="submit" class="nav-item nav-link-edit btn btn-info btn-block" value="submit"
+                         (click)="SignupUser(SC.value)" [routerLink]="['/otp']">Generate OTP</button>
+                </div>
+            </div>
+        </div>
+    </form>
+        
+        <div class="col-md-3"></div>
+    </div>
+</div>
+</div>
+</body>

@@ -1,0 +1,45 @@
+<div class="conatiner-fluid">
+    {{EP.value|json}}
+    <form [formGroup]="EP" novalidate>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="card">
+                    <h1 style="text-align: center;"><b>Edit Profile</b></h1>
+                <div class="profile">
+                    <img src="./assets/Images/download.png" class="rounded-circle" width="200" height="200" style="margin-top: 25px;" >
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtFirm" class="form-control" formControlName="FirmName" placeholder="Firm Name" style="margin-top: 20px;">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtOwner" class="form-control" placeholder="Owner Name" style="margin-top: 20px;" formControlName="OwnerName">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtContact" class="form-control" placeholder="Contact" formControlName="Contact">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtEmail" class="form-control" placeholder="Email" formControlName="Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="txtPincode" class="form-control" placeholder="Pincode" formControlName="Pincode">
+                </div>
+                <div class="form-group">
+                        <textarea rows="4" cols="50" class="form-control" style="margin-bottom: 25px;" placeholder="Address" formControlName="Address"></textarea>                
+                    </div>
+ 
+                <div class="form-group" style="text-align: center;">
+                        <button type="submit" class="btn btn-primary btn-lg"  (click)="editprofile(EP.value)" style="width: 200px; margin-right: 60px;">Update</button>
+                        <button type="submit" class="btn btn-danger btn-lg" style="width: 200px;">Reset</button>
+                </div>
+                <div class="form-group">
+                    <div class="pwd_btn">
+                   <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 15px;" [routerLink]="['/changepwd']">Change Password</button>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="col-md-3"></div>
+        </div>
+    </form>
+</div>

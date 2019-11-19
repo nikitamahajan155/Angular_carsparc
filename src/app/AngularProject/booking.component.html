@@ -1,0 +1,38 @@
+<div class="container">
+    <!-- {{bookingInfo|json}} -->
+<!-- <form [formGroup]="BC">  -->
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <!-- <div class="card"> -->
+        <h1 style="text-align: center;">View All Nearest Bookings</h1>
+<!-- My JSOn {{bookingInfo|json}} -->
+        <table class="table table-striped">
+            <thead>
+                <tr *ngIf="bookingInfo">
+                  <th>Id</th>
+                  <th>Car type</th>
+                  <th>Service Type</th>
+                  <th>Budget</th>
+                  <th>Order</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let s of bookingInfo">
+                <td>{{s.Nearest_Booking_Id}}</td>
+                <td>{{s.CarType}}</td>
+                <td>{{s.ServiceType}}</td>
+                <td>{{s.Budget}}</td>
+                <td>
+                  <button type="submit" class="btn btn-info" (click)="GetbookingManitInfo()">Get Order</button>
+                      </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="submit" class="btn btn-info" (click)="GetbookingInfo()">User Information</button>
+    </div>
+<!-- </div> -->
+    <div class="col-md-3"></div>
+</div>
+<!-- </form> -->
+</div>

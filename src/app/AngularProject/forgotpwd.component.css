@@ -1,0 +1,31 @@
+button{
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 90px;
+    margin-top: 18px;
+}
+.card{
+    margin: 5px;
+    margin-top: 100px;
+    padding: 30px;
+    border: 2px solid white;
+    -webkit-box-shadow: 10px 9px 23px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 9px 23px 3px rgba(0,0,0,0.75);
+    box-shadow: 10px 9px 23px 3px rgba(0,0,0,0.75);
+    }
+h1{
+    background-color: rgb(18, 155, 247);
+    color: #f1f1f1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+    }
+input{
+    align-content: center;
+    border-radius: 10px;
+    padding: 23px; 
+    height: 25px; 
+    background-color: #f1f1f1;
+    }
