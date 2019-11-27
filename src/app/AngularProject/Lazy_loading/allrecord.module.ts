@@ -7,7 +7,7 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 export const allrecRoute: Routes=[
     {path: '', redirectTo: 'allrecord', pathMatch:'full'},
-    { path: 'allrecord', component: AllrecordComponent}
+    { path: '', component: AllrecordComponent}
 ]
 
 @NgModule({

@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 export const bookingroute: Routes=[
     {path: '', redirectTo: 'booking', pathMatch:'full'},
-    { path: 'booking', component: BookingComponent}
+    { path: '', component: BookingComponent}
 ]
 
 

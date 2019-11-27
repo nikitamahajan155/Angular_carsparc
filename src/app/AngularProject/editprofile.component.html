@@ -11,26 +11,63 @@
                 </div>
                 <div class="form-group">
                     <input type="text" id="txtFirm" class="form-control" formControlName="FirmName" placeholder="Firm Name" style="margin-top: 20px;">
-                </div>
+                    <div id="validator" *ngIf="EP.controls['FirmName'].hasError('required') 
+                    && (EP.controls['FirmName'].touched || EP.controls['FirmName'].dirty)">
+                    FirmName is required
+                    </div>
+                </div> 
                 <div class="form-group">
-                    <input type="text" id="txtOwner" class="form-control" placeholder="Owner Name" style="margin-top: 20px;" formControlName="OwnerName">
+                    <input type="text" id="txtOwner" class="form-control" placeholder="Owner Name"  formControlName="OwnerName">
+                
+                <div id="validator" *ngIf="EP.controls['OwnerName'].hasError('required') 
+                && (EP.controls['OwnerName'].touched || EP.controls['OwnerName'].dirty)">
+                OwnerName is required
+                </div> 
+            </div>  
+
+            <div class="form-group">
+                <input type="text" id="txtContact" class="form-control" placeholder="Contact" formControlName="Contact">
+                <div  id="validator" *ngIf="EP.controls['Contact'].hasError('required') &&
+                (EP.controls['Contact'].touched ||EP.controls['Contact'].dirty)">
+                    Contact is required.
                 </div>
-                <div class="form-group">
-                    <input type="text" id="txtContact" class="form-control" placeholder="Contact" formControlName="Contact">
+                <div  id="validator" *ngIf="EP.controls['Contact'].hasError('pattern')">
+                    Contact should be 10 digit.
                 </div>
+            </div>  
                 <div class="form-group">
                     <input type="text" id="txtEmail" class="form-control" placeholder="Email" formControlName="Email">
+                <div  id="validator" *ngIf="EP.controls['Email'].hasError('required') &&
+                (EP.controls['Email'].touched ||EP.controls['Email'].dirty)">
+                Email is required.
                 </div>
-                <div class="form-group">
-                    <input type="text" id="txtPincode" class="form-control" placeholder="Pincode" formControlName="Pincode">
+                <div id="validator" *ngIf="EP.controls['Email'].hasError('pattern')">
+                    Invalid Email
                 </div>
-                <div class="form-group">
-                        <textarea rows="4" cols="50" class="form-control" style="margin-bottom: 25px;" placeholder="Address" formControlName="Address"></textarea>                
-                    </div>
- 
-                <div class="form-group" style="text-align: center;">
-                        <button type="submit" class="btn btn-primary btn-lg"  (click)="editprofile(EP.value)" style="width: 200px; margin-right: 60px;">Update</button>
-                        <button type="submit" class="btn btn-danger btn-lg" style="width: 200px;">Reset</button>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="txtPincode" class="form-control" placeholder="Pincode" formControlName="Pincode">
+                <div  id="validator" *ngIf="EP.controls['Pincode'].hasError('required') &&
+                (EP.controls['Pincode'].touched ||EP.controls['Pincode'].dirty)">
+                Pincode is required.
+                </div>
+                <div id="validator" *ngIf="EP.controls['Pincode'].hasError('pattern')">
+                    Pincode Invalid
+                </div>
+            </div>
+
+            <div class="form-group">
+                <textarea rows="4" cols="50" class="form-control" style="margin-bottom: 25px;" placeholder="Address" formControlName="Address"></textarea>                
+                <div id="validator" *ngIf="EP.controls['Address'].hasError('required') &&
+                    (EP.controls['Address'].touched ||EP.controls['Address'].dirty)">
+                    Address is required.
+                </div>
+            </div>
+                
+            <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn btn-primary btn-lg"  (click)="editprofile(EP.value)" style="width: 200px; margin-right: 60px;">Update</button>
+                    <button type="submit" class="btn btn-danger btn-lg" style="width: 200px;">Reset</button>
                 </div>
                 <div class="form-group">
                     <div class="pwd_btn">

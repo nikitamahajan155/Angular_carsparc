@@ -7,8 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 export const editprofileRoute: Routes=[
-    {path: '', redirectTo: 'edit', pathMatch:'full'},
-    { path: 'edit', component: EditprofileComponent}
+    {path:'', redirectTo: 'edit', pathMatch:'full'},
+    { path: '', component: EditprofileComponent}
 ]
 
 @NgModule({

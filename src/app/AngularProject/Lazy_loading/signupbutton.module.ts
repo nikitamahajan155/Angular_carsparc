@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 
 export const signupbuttonRoute: Routes=[
     {path: '', redirectTo: 'button', pathMatch:'full'},
-    { path: 'button', component: SignupbuttonComponent}
+    { path: '', component: SignupbuttonComponent}
 ]
 
 @NgModule({

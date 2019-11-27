@@ -6,7 +6,7 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 export const signupRoute: Routes=[
     {path: '', redirectTo: 'signup', pathMatch:'full'},
-    { path: 'signup', component: SignupComponent},
+    { path: '', component: SignupComponent},
 ]
 
 @NgModule({

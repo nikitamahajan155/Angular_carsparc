@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 export const changepwdRoute: Routes=[
     {path: '', redirectTo: 'changepwd', pathMatch:'full'},
-    { path: 'changepwd', component: ChangepwdComponent}
+    { path: '', component: ChangepwdComponent}
 ]
 
 @NgModule({

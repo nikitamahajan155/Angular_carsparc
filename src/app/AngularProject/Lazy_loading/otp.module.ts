@@ -4,7 +4,7 @@ import { OtpComponent } from '../otp.component';
 
 export const otpRoute: Routes=[
     {path: '', redirectTo: 'otp', pathMatch:'full'},
-    { path: 'otp', component: OtpComponent}
+    { path: '', component: OtpComponent}
 ]
 
 @NgModule({

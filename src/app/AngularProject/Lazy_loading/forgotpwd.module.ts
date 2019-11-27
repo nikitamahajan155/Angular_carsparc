@@ -4,7 +4,7 @@ import { ForgotpwdComponent } from '../forgotpwd.component';
 
 export const forgotpwdRoute: Routes=[
     {path: '', redirectTo: 'forgotpwd', pathMatch:'full'},
-    { path: 'forgotpwd', component: ForgotpwdComponent}
+    { path: '', component: ForgotpwdComponent}
 ]
 
 @NgModule({
